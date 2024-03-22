@@ -15,7 +15,7 @@ import java.util.List;
 
 
 @RestController
-public static class AuthorizationController {
+public  class AuthorizationController {
     AuthorizationService service;
 
     public AuthorizationController(AuthorizationService service) {
