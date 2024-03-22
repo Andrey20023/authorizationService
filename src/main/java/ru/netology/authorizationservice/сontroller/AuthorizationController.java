@@ -1,4 +1,4 @@
-package ru.netology.authorizationservice.profile;
+package ru.netology.authorizationservice.сontroller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -9,11 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
 import ru.netology.authorizationservice.enumAuthorities.Authorities;
 import ru.netology.authorizationservice.exceptions.InvalidCredentials;
 import ru.netology.authorizationservice.exceptions.UnauthorizedUser;
+import ru.netology.authorizationservice.servise.AuthorizationService;
 
 import java.util.List;
 
+
 @RestController
-public class AuthorizationController {
+public static class AuthorizationController {
     AuthorizationService service;
 
     public AuthorizationController(AuthorizationService service) {
@@ -37,3 +39,4 @@ public class AuthorizationController {
         return new ResponseEntity<>("Exception: " + e.getMessage(), HttpStatus.UNAUTHORIZED);
     }
 }
+

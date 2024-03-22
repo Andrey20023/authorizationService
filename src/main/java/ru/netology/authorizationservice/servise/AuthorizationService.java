@@ -1,4 +1,4 @@
-package ru.netology.authorizationservice.profile;
+package ru.netology.authorizationservice.servise;
 
 import org.springframework.stereotype.Service;
 import ru.netology.authorizationservice.enumAuthorities.Authorities;
@@ -16,7 +16,7 @@ public class AuthorizationService {
         this.userRepository = userRepository;
     }
 
-    List<Authorities> getAuthorities(String user, String password) {
+    public List<Authorities> getAuthorities(String user, String password) {
         if (isEmpty(user) || isEmpty(password)) {
             throw new InvalidCredentials("User name or password is empty");
         }
