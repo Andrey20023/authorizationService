@@ -1,0 +1,10 @@
+version: '1'
+
+services:
+  authorizationservice:
+    build:
+      context: .
+    ports:
+      - 8080:8080
+
+
